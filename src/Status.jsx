@@ -1,22 +1,14 @@
 import React from 'react';
 
+import Online from './Online.jsx';
+import Offline from './Offline.jsx';
+
 import './status.scss';
 
 const Status = ({ isOnline }) => {
-  if (isOnline) {
-    return (
-      <div className="status">
-        <span className="status__text">All good!</span>
-      </div>
-    );
-  }
-  
-  return (
-    <div className="status">
-      <span className="status__text">Offline</span>
-      <button className="status__btn">Reconnect</button>
-    </div>
-  )
+  return isOnline
+    ? <Online />
+    : <Offline />;
 };
 
 export default Status;

@@ -5,7 +5,7 @@ import './index.scss';
 import Status from './Status.jsx';
 
 const App = () => {
-  return <Status isOnline={false} />
+  return <Status isOnline={true} />
 }
 
 export default App;
